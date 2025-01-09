@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(246, 198, 206);
+        }
+        h1{
+            color: rgb(255, 0, 119);
+            position: fixed;
+            top:10%;
+            left:20%;
+            font-size: 30px;
+            animation: bounce 1s linear infinite;
+        }
+        @keyframes bounce{
+            0% { transform: translateY(0);}
+            50% { transform: translateY(-10px);}
+            100% { transform: translateY(0);}
+        }
+        .inp{
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+            margin-top: 200px;
+            margin-left: 20%;
+            display: inline-block;
+            font-size: 20px;
+        }
+        .inp:focus{
+            outline: none;
+            border: 2px solid rgb(243, 148, 176);
+        }
+        .btn-inp{
+            background-color: rgb(243, 148, 176);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 20%;
+            font-size: 20px;
+            position: relative;
+            left: 20%;
+            top: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Enter Your Name</h1>
+    <input type="text" placeholder="Enter your name" id="inp" class="inp"><br>
+    <a id="btn-inp" class="btn-inp" type="submit" onclick="inp()" href="love-web(css+js).html">submit</a>
+
+    <script>
+        function inp(){
+            var name = document.getElementById('inp').value;
+            localStorage.setItem('name', name);
+        }
+    </script>
+    
+    
+</body>
+</html>
